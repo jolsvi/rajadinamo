@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+    <title>Raja Dinamo</title>
+
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/jquery.mmenu.all.css" />
+	<link type="text/css" rel="stylesheet" href="assets/css/generic.css" />
+	<link type="text/css" rel="stylesheet" href="assets/css/js-image-slider.css" />
+
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.mmenu.min.all.js"></script>
+	<script type="text/javascript" src="assets/js/js-image-slider.js"></script>
+	
+    <script type="text/javascript">
+        $(function() {
+            $('nav#menu').mmenu();
+        });
+		
+		$(document).ready(function(){
+			initTabs();
+			});
+			function initTabs() {
+			$('#tabMenu a').bind('click',function(e) {
+			e.preventDefault();
+			var thref = $(this).attr("href").replace(/#/, '');
+			$('#tabMenu a').removeClass('active');
+			$(this).addClass('active');
+			$('#tabContent div.content').removeClass('active');
+			$('#'+thref).addClass('active');
+			});
+		}
+    </script>
+</head>
+<body>
+    <div id="page">
+        <div class="header">
+            <a href="#menu"></a>
+            <div class="logo"><img src="assets/img/logo.png"></div>
+        </div>
+        <div class="content">
+		
+			<!-- showcase -->
+			<div id="sliderFrame">
+				<div id="slider">
+					<a href="#"><img src="dummy/brake_booster.jpg"/></a>
+					<a href="#"><img src="dummy/clutch_slave_cylinder.jpg"/></a>
+					<a href="#"><img src="dummy/piston_caliper.jpg"/></a>					
+				</div>
+				
+				<div id="thumbs">
+					<div class="thumb">
+						<img src="dummy/birkens.png" alt="HYDRAULIC PARTS" />
+						<div class="thumb-text">HYDRAULIC PARTS</div>
+					</div>
+					<div class="thumb">
+						<img src="dummy/news.png" />
+						<div class="thumb-text">NEWS</div>
+					</div>					
+					<div class="thumb">
+						<img src="dummy/heiker.png" />
+						<div class="thumb-text">SUSPENSION PARTS</div>
+					</div>
+				</div>			
+			</div>
+			
+			<div id="tabContainer">
+				<div id="tabMenu">
+					<ul class="menu">
+						<li><a href="new" class="active"><span><div class="icon-new"></div></span></a></li>
+						<li><a href="promo"><span><div class="icon-promo"></div></span></a></li>
+						<li><a href="favorite"><span><div class="icon-fav"></div></span></a></li>
+					</ul>
+				</div>
+						
+				<div id="tabContent">
+					<!------ NEW ------->
+					<div id="new" class="content active">
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product1.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">Birkens</div>
+								<div class="brand-part">Brake booster 5343-khjv</div>
+							</div>
+							<div class="category">
+								Clutch Slave Cylinder
+							</div>
+							<div class="application">
+								Suzuki Baleno, Suzuki Soluna 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product2.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">piston caliper pws-4238-32</div>
+							</div>
+							<div class="category">
+								Piston Caliper
+							</div>
+							<div class="application">
+								Honda CRV, Toyota Kijang 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product3.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">clutch slave cylinder 5343-khjv</div>
+							</div>
+							<div class="category">
+								Clutch Slave Cylinder
+							</div>
+							<div class="application">
+								Toyota Kijang, Honda City 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product1.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">Birkens</div>
+								<div class="brand-part">Brake booster 5343-khjv</div>
+							</div>
+							<div class="category">
+								Brake Booster
+							</div>
+							<div class="application">
+								Suzuki Karimun, Toyota Avanza 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product4.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">Birkens</div>
+								<div class="brand-part">Brake booster 5343-khjv</div>
+							</div>
+							<div class="category">
+								Brake Booster
+							</div>
+							<div class="application">
+								Suzuki Baleno, Suzuki Soluna 
+							</div>							
+						</div>
+						
+					</div>
+					
+					<!------ PROMO ------->
+					<div id="promo" class="content">
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product2.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">piston caliper pws-4238-32</div>
+							</div>
+							<div class="category">
+								Piston Caliper
+							</div>
+							<div class="application">
+								Honda CRV, Toyota Kijang 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product4.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">Birkens</div>
+								<div class="brand-part">Brake booster 5343-khjv</div>
+							</div>
+							<div class="category">
+								Brake Booster
+							</div>
+							<div class="application">
+								Suzuki Baleno, Suzuki Soluna 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product3.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">clutch slave cylinder 5343-khjv</div>
+							</div>
+							<div class="category">
+								Clutch Slave Cylinder
+							</div>
+							<div class="application">
+								Toyota Kijang, Honda City 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product2.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">piston caliper pws-4238-32</div>
+							</div>
+							<div class="category">
+								Piston Caliper
+							</div>
+							<div class="application">
+								Honda CRV, Toyota Kijang 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product4.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">Birkens</div>
+								<div class="brand-part">Brake booster 5343-khjv</div>
+							</div>
+							<div class="category">
+								Brake Booster
+							</div>
+							<div class="application">
+								Suzuki Baleno, Suzuki Soluna 
+							</div>							
+						</div>
+					</div>
+					
+					<!------ FAVORITE ------->
+					<div id="favorite" class="content">
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product4.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">Birkens</div>
+								<div class="brand-part">Brake booster 5343-khjv</div>
+							</div>
+							<div class="category">
+								Brake Booster
+							</div>
+							<div class="application">
+								Suzuki Baleno, Suzuki Soluna 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product3.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">clutch slave cylinder 5343-khjv</div>
+							</div>
+							<div class="category">
+								Clutch Slave Cylinder
+							</div>
+							<div class="application">
+								Toyota Kijang, Honda City 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product2.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">piston caliper pws-4238-32</div>
+							</div>
+							<div class="category">
+								Piston Caliper
+							</div>
+							<div class="application">
+								Honda CRV, Toyota Kijang 
+							</div>							
+						</div>						
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product2.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">piston caliper pws-4238-32</div>
+							</div>
+							<div class="category">
+								Piston Caliper
+							</div>
+							<div class="application">
+								Honda CRV, Toyota Kijang 
+							</div>							
+						</div>
+						
+						<div class="list">
+							<div class="product-photo">
+								<img src="dummy/product3.png">
+							</div>
+							<div class="brand">
+								<div class="brand-name">heiker</div>
+								<div class="brand-part">clutch slave cylinder 5343-khjv</div>
+							</div>
+							<div class="category">
+								Clutch Slave Cylinder
+							</div>
+							<div class="application">
+								Toyota Kijang, Honda City 
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="menu-touch">
+				<div class="bar">
+					<a href="#"><div class="box-left"><img src="assets/img/icon-event.png" /></div></a>
+					<a href="#"><div class="box-right"><img src="assets/img/icon-tips.png" /></div></a>
+				</div>
+				<div class="bar">
+					<a href="#"><div class="box-left"><img src="assets/img/icon-news.png" /></div></a>
+					<a href="#"><div class="box-right"><img src="assets/img/icon-login.png" /></div></a>
+				</div>
+			</div>
+			
+        </div>
+		
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="login.html">Login &amp; Registration</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="event.html">Event</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
